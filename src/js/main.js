@@ -11,7 +11,7 @@ hamburger.addEventListener("click", () => {
   body.classList.toggle("active");
 });
 
-document.querySelectorAll(".nav-link").forEach((link) =>
+document.querySelectorAll(".js-nav-link").forEach((link) =>
   link.addEventListener("click", () => {
     hamburger.classList.remove("active");
     navbar.classList.remove("active");
@@ -63,12 +63,14 @@ $(window).resize(function(e){
   }
 });
 
+// accordion
+
 $(function() {
-  $('.accordion li').click(function(){
+  $('.js-accordion-title').click(function(){
     $(this).toggleClass(' active ');
     $(this).siblings().removeClass(' active '); 
-    $('.accordion__submenu').stop().slideUp();
-    $('.active .accordion__submenu').stop().slideDown();
+    $('.js-accordion-submenu').stop().slideUp();
+    $('.active .js-accordion-submenu').stop().slideDown();
     return false;
   });
 });
