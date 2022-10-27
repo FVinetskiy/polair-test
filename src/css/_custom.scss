@@ -1,0 +1,46 @@
+
+$light-color:#D0D0D0;
+$base-color: #003154;
+
+.slick-dots {
+    display: flex!important;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 30px;
+
+    li {
+        width: 10px;
+        height: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 3px;
+
+        a {
+            width: 5.6px;
+            height: 5.6px;
+            border:0;
+            border-radius: 50%;
+            background: $light-color;
+            display: flex;
+        }
+
+        &.slick-active {
+            a {
+                width: 8px;
+                height: 8px;
+                background: $base-color;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 767px) {
+    .slick-dots {
+        right: 49px;
+        transform: none;
+        bottom: 41px;
+        left: auto;
+    }
+}
+
